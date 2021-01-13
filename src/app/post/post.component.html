@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title [ngStyle]="{ color: counter >= 3 ? 'green' : 'black' }">{{ postObject.title }}</mat-card-title>
+    <mat-card-subtitle>Ecrit par {{ postObject.user }} le {{ postObject.date }}</mat-card-subtitle>
+    <img mat-card-avatar [src]="postObject.imageUrl">
+  </mat-card-header>
+  <mat-card-content>{{ postObject.content }}</mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="primary" (click)="onClickButton()">{{ buttonText }}</button>
+    <span *ngIf="counter > 0" [ngClass]="{ 'italic-counter': counter >= 3 }">Counter: {{ counter }}</span>
+  </mat-card-actions>
+</mat-card>

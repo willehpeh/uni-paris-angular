@@ -1,0 +1,4 @@
+<button mat-flat-button color="primary" (click)="onClickButton()">Toggle list</button>
+<div *ngIf="toggled" class="list">
+  <h2 *ngFor="let postElement of postList">{{ postElement.title }}</h2>
+</div>
