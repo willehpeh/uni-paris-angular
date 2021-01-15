@@ -6,7 +6,7 @@ import { FourOhFourComponent } from './components/four-oh-four/four-oh-four.comp
 
 const routes: Routes = [
   { path: 'posts', component: PostListComponent },
-  { path: 'post/:index', component: SinglePostComponent },
+  { path: 'posts/:id', component: SinglePostComponent },
   { path: '404', component: FourOhFourComponent },
   { path: '', pathMatch: 'full', redirectTo: 'posts' },
   { path: '**', redirectTo: '404' }

@@ -5,215 +5,223 @@ import { Post } from '../models/post.model';
 export class PostsService {
   private posts: Post[] = [
     {
-      id: 'f4a3d03c-5a40-4b3b-8a12-c89886437a48',
-      userId: '5ea70834-0506-495f-9200-445729113a15',
-      title: 'Laborum perferendis id rem ut ut est in',
-      content: 'Et eligendi minus cupiditate sit et deleniti quae aliquam ut. Sequi error ad perspiciatis quo. Repellendus est est eum labore quos placeat dolor sed. Et fugit blanditiis ut omnis delectus. Molestias quaerat magni voluptate qui rem eius.',
+      id: 'd3a12ce8-5b40-4b3a-b715-9a0d758f013c',
+      userId: '6cfc2290-eb4e-4afc-be95-3df5e65d3353',
+      title: 'Est labore voluptatem fugiat et',
+      content: 'Quia sit aut placeat at quo ratione qui. Explicabo esse aspernatur. In distinctio voluptate et iste mollitia temporibus velit cupiditate.',
       comments: [
-        'fca25dc7-330d-4917-be9c-9141dc03d31e'
+        'f3bf108f-e375-482d-a357-ef4e57e059e2',
+        '6e139e97-f8a8-4c7e-b6f5-dbd226c6e2b2'
       ],
-      created: '2021-01-14T00:40:43.626Z'
+      created: '2021-01-17T02:02:56.690Z'
     },
     {
-      id: 'f8f62dd9-db02-4cbf-bd2e-3a8822022ed6',
-      userId: '263b7db2-78b2-41ba-9db3-b6b59eb564ad',
-      title: 'Est quibusdam voluptas ad ab perferendis',
-      content: 'Et quia eum rerum velit omnis. Qui reiciendis dolor iusto. Eos aliquam repellendus et iste quisquam dolore voluptas.',
-      comments: [
-        '93634eb0-0ac2-436b-9421-c89e90c15fba',
-        '0d62057a-be0e-4a3c-9a0f-16fe1ed3e1a1',
-        '222e511e-b792-468f-b5b4-772901f8b2b9'
-      ],
-      created: '2021-01-12T18:55:25.569Z'
-    },
-    {
-      id: '3162dc6e-9993-4238-bc0a-6e5f7cad98fa',
-      userId: '683d41a0-ba5c-4a6f-95bb-e84a10d300b6',
-      title: 'Aut et voluptates aut ullam ut aut et inventore',
-      content: 'In et at omnis. Iste impedit perferendis architecto ex voluptas ullam nemo rem. Sequi nostrum esse animi iste at odit tempore. Et deleniti ipsa tenetur dolorem sit perspiciatis vero. Dolores pariatur voluptas in velit facilis quo. Eum molestiae repellat accusantium fugit nemo eum.',
-      comments: [
-        'f80a92ef-1e14-4989-b16f-ca2da93f2578',
-        '61ce36cb-2d84-454c-9658-7655cdc434ac',
-        'b30d5509-07ff-4e99-a715-e4bf6d2628ca'
-      ],
-      created: '2021-01-28T20:18:40.412Z'
-    },
-    {
-      id: '93a25a41-c1da-48ae-b6cc-de1133b65102',
-      userId: '263b7db2-78b2-41ba-9db3-b6b59eb564ad',
-      title: 'Magnam alias facere consequatur dolorum',
-      content: 'Molestiae dolores temporibus eligendi est dolorem doloremque suscipit. Dolores quibusdam sapiente et sint optio deserunt sequi. Voluptatem id perspiciatis et iusto voluptatibus voluptatem sunt. Ab sed aut fugit.',
+      id: 'd593a44c-5f65-452f-8e9c-ac85cdd73bfe',
+      userId: '6eb53580-9c7a-4989-8097-b8134dc6521f',
+      title: 'Nesciunt adipisci libero sapiente asperiores impedit velit',
+      content: 'Placeat praesentium ipsam libero. Veniam nam perspiciatis non accusantium ducimus placeat dolorum. Officiis labore iusto accusantium dolores expedita ipsam.',
       comments: [],
-      created: '2021-01-03T22:29:44.185Z'
+      created: '2021-01-26T11:56:55.544Z'
     },
     {
-      id: '29df56eb-3017-497a-b7bb-368f431c5fb2',
-      userId: '263b7db2-78b2-41ba-9db3-b6b59eb564ad',
-      title: 'Quia amet sint aliquid cumque unde molestias non aut voluptas',
-      content: 'Quaerat sapiente eos odio. Autem ducimus ducimus quia ex dolores perferendis fugiat voluptate unde. Accusantium odit similique officia eum maiores dolore rerum.',
+      id: 'bfa854f0-e274-41d2-beff-2b72dbfc7013',
+      userId: '3d17f086-9e9b-45b5-b5d3-6d62f2ee7d7a',
+      title: 'Ad voluptatum atque aut qui dolor atque tempora quis',
+      content: 'Maiores fugiat enim officia ut dolorem. Sunt atque dolor quo. Rerum dolorum error eaque et. Quis magni soluta soluta similique mollitia ut recusandae repellat. Et iste aut et est architecto et. Ut repellat veritatis pariatur in est cumque.',
       comments: [
-        '6fff0092-3f89-4437-9ab4-ae0409937517',
-        '32c71577-5968-4ad1-8cb9-5b379fa6773c',
-        '2cbd8749-bb26-4ab3-8e1f-a0960579d1c7'
+        'b268893f-f6ab-4fbb-96b2-daac16361c44'
       ],
-      created: '2021-01-08T11:34:28.187Z'
+      created: '2021-01-28T18:36:00.075Z'
     },
     {
-      id: '7cc5e672-e989-4493-b723-b3d2aa5613a7',
-      userId: '0c0516c9-864e-4ed9-be2c-28b5b3ed9015',
-      title: 'Ipsam',
-      content: 'Dignissimos quia est. Quisquam quia magnam et dolore. Et quis minima. Modi odio et eos quaerat. Dolor omnis in suscipit sit iste ut sunt doloremque dolorem.',
+      id: 'f2556a83-4540-48cc-bead-dd556f482cce',
+      userId: 'a4b32b31-34b4-4c27-86d5-08fc2f786600',
+      title: 'Ad ipsam numquam voluptatibus quos exercitationem ad quia est accusamus',
+      content: 'Ut dolorum eius iure. Nihil nemo soluta. Itaque voluptatem voluptas quis similique aut. Quam voluptatem ut.',
       comments: [
-        'b88e7576-53cc-449b-8f81-1ecab4409c4a'
+        'e099799a-6cde-4ed0-a26f-7964a656758f'
       ],
-      created: '2021-01-09T08:41:50.073Z'
+      created: '2021-01-05T04:09:52.311Z'
     },
     {
-      id: '9718c47e-3cc5-4158-b4a1-4bf50fccb343',
-      userId: '263b7db2-78b2-41ba-9db3-b6b59eb564ad',
-      title: 'Est quas sit delectus quibusdam aliquam quis ipsam',
-      content: 'Laboriosam quo ipsam facilis et est et. Dolor quae non exercitationem sit eveniet aperiam. Ratione modi iste debitis accusantium voluptas aspernatur reiciendis.',
+      id: '332ed05a-04e6-4336-944d-0e9c0e5752f3',
+      userId: 'a4b32b31-34b4-4c27-86d5-08fc2f786600',
+      title: 'Autem aspernatur non consequatur',
+      content: 'Ut ut ratione aut earum totam optio dolores odit tempore. Corporis omnis distinctio sit. Quis ducimus dolorum velit. Aliquam tenetur cupiditate pariatur soluta possimus aspernatur aut. Molestias dolorem qui et vel officia. Cupiditate nisi laboriosam minima dolorem omnis ducimus quidem consequatur.',
       comments: [],
-      created: '2021-01-07T08:06:30.901Z'
+      created: '2021-01-02T15:32:24.495Z'
     },
     {
-      id: '84e904e8-6d6f-42fc-8929-974039fce1f9',
-      userId: 'f7e1a607-3545-40c4-b547-ba117c7c77be',
-      title: 'Illum eos error reiciendis voluptatum repellat officia tempora',
-      content: 'Aut laborum non nihil maiores quam recusandae. Deleniti mollitia sunt. Et dolores accusamus minus ut corrupti pariatur omnis dicta.',
+      id: 'b0e8f75f-7e48-4e05-b1fd-1474f7ccbe42',
+      userId: 'a96c94da-c421-4a24-b6df-cc0ec8397f77',
+      title: 'Sint eius impedit consequuntur tenetur vero',
+      content: 'Nemo eos modi. Minima enim repudiandae excepturi eveniet quo consequatur odit. Est ad autem et et. Consequatur delectus porro iure eos repellat est totam. Placeat corporis sed quia aut neque placeat reprehenderit nihil laborum.',
+      comments: [
+        'eb48ccfe-753d-4ddb-82d6-012648da6323',
+        '1fb3157b-dd93-438e-96a2-c3272ac99720',
+        '451ea156-2808-4671-8776-cfc7a8a5e513'
+      ],
+      created: '2021-01-29T22:05:07.821Z'
+    },
+    {
+      id: 'a0fc91b9-8e7b-4894-8047-d89634360f08',
+      userId: '6cfc2290-eb4e-4afc-be95-3df5e65d3353',
+      title: 'Quia',
+      content: 'Veniam officia dolores et odio qui mollitia et et illum. Eum quaerat et laudantium. Architecto earum eos hic tempora dolorum necessitatibus et. Non nam aut quia aperiam et sint dolor numquam eos.',
       comments: [],
-      created: '2021-01-26T15:44:46.326Z'
+      created: '2021-01-08T18:40:18.024Z'
     },
     {
-      id: '3f2e75ca-905b-49c7-8ed6-b8556d590798',
-      userId: '5ea70834-0506-495f-9200-445729113a15',
-      title: 'Fuga sit ut laboriosam deleniti',
-      content: 'Voluptate a aut ut maiores. Veritatis perspiciatis error in ipsum. Quas odit neque.',
+      id: 'bf5d7cce-3d78-427d-aecd-eda78717fab5',
+      userId: '6eb53580-9c7a-4989-8097-b8134dc6521f',
+      title: 'Mollitia hic est alias',
+      content: 'Voluptatibus itaque quasi id nisi ut ipsa et aut vel. Et quia aut delectus rerum delectus sit corrupti rem. Non quis exercitationem eveniet doloremque optio consectetur aut suscipit. Eos et fuga eum. Consequatur dicta dolor nesciunt reiciendis qui maxime. Totam quibusdam incidunt fuga corporis inventore eligendi doloribus non mollitia.',
+      comments: [
+        'd23364f5-9171-4e27-b5fa-2dbf31fce1a8',
+        '82b750c2-4203-4708-9a01-e4998422a9ae',
+        '7feace2b-77e0-429a-86fc-089473882809'
+      ],
+      created: '2021-01-15T20:01:27.137Z'
+    },
+    {
+      id: 'f5a3036d-6cdd-47fd-beb8-8d1337710982',
+      userId: '6cfc2290-eb4e-4afc-be95-3df5e65d3353',
+      title: 'Dolore libero modi quisquam unde facere',
+      content: 'Dolorem nobis dolores minus fugiat officia. Quis praesentium molestiae iusto inventore in amet eum. Aut repellendus qui veritatis in blanditiis sunt dolorem magnam libero.',
+      comments: [
+        '4348f904-0aff-4981-b3c4-eeccb9c6c2a8'
+      ],
+      created: '2021-01-03T15:25:29.980Z'
+    },
+    {
+      id: '4136d527-67f7-444a-b515-931b1e884267',
+      userId: '6cfc2290-eb4e-4afc-be95-3df5e65d3353',
+      title: 'Et omnis id doloribus ullam',
+      content: 'Neque error quo voluptatum maiores officiis et et voluptatum eos. Aperiam reprehenderit neque vitae natus earum. Sit est dolor.',
+      comments: [
+        '3826b0ac-9d0a-4670-a587-a5fae9075ccf'
+      ],
+      created: '2021-01-12T02:44:09.292Z'
+    },
+    {
+      id: '3b2f96db-d1ab-4aae-9f12-e46ada690c96',
+      userId: '6eb53580-9c7a-4989-8097-b8134dc6521f',
+      title: 'Sapiente id eius minus consequuntur et dicta animi voluptatem enim',
+      content: 'Et libero cumque vero et odit aliquam architecto qui temporibus. Velit atque eos voluptatem. Sed accusantium molestiae quidem at recusandae quos excepturi nam dolore. Explicabo aut eos aliquam aut. Et enim ducimus eos aut ea. Dignissimos cupiditate nesciunt consequuntur nihil fugiat atque inventore perferendis.',
+      comments: [
+        'd1c2edba-36b4-4d06-ae75-4127f510be85',
+        '1f2e9761-ba87-4295-af49-4ccc042455a1'
+      ],
+      created: '2021-01-04T03:31:57.787Z'
+    },
+    {
+      id: 'b04e92c5-6953-48c0-a96f-82f75bd9ef23',
+      userId: 'a4b32b31-34b4-4c27-86d5-08fc2f786600',
+      title: 'Amet reiciendis sapiente laboriosam odio',
+      content: 'Enim rem sunt repellendus omnis. Qui voluptas id ea ipsam voluptate recusandae recusandae voluptatem omnis. Autem in omnis quo consequatur velit officiis non qui amet. Asperiores minus et consequatur qui.',
+      comments: [
+        '42ea2787-00b7-480f-845e-9332be09f833',
+        '14a33097-9f6b-4055-8901-43176c599517'
+      ],
+      created: '2021-01-25T13:32:19.341Z'
+    },
+    {
+      id: '9cf0a3de-0c8b-4352-9ea0-b18e52dfad4a',
+      userId: '6eb53580-9c7a-4989-8097-b8134dc6521f',
+      title: 'Facere qui amet et voluptatibus animi aut in soluta',
+      content: 'Quae voluptatem ut voluptas natus ullam minima. Nam numquam rerum enim qui voluptas. Molestias accusamus reiciendis. Occaecati perferendis est eos quis earum quos earum.',
+      comments: [
+        '0f4d1925-ca26-4dc2-ad2b-b251776d6f23'
+      ],
+      created: '2021-01-10T09:32:53.603Z'
+    },
+    {
+      id: '1cb1a3b3-44f1-4731-8c95-5f9cd2c94a2a',
+      userId: '3d17f086-9e9b-45b5-b5d3-6d62f2ee7d7a',
+      title: 'Quis aut omnis facere nihil velit est',
+      content: 'Qui voluptas molestiae possimus quo voluptatem accusamus. Voluptas cumque excepturi. Accusantium reiciendis quas architecto nesciunt ad libero porro in. Accusantium iste aliquid alias et quisquam est sed assumenda maxime. Deserunt odio provident.',
+      comments: [
+        '30210349-c065-45cd-8603-d18ba30d2d2a',
+        '8dd5bed7-d057-4686-ada3-3ed0bf945b78'
+      ],
+      created: '2021-01-06T12:40:06.362Z'
+    },
+    {
+      id: '5d6e2338-2226-44ce-8443-c695c148e829',
+      userId: 'a96c94da-c421-4a24-b6df-cc0ec8397f77',
+      title: 'Beatae voluptatem amet aut libero tenetur veritatis cumque quidem',
+      content: 'Alias harum aut consequatur doloribus qui nesciunt eos error accusamus. Quis modi veritatis eveniet recusandae. Beatae culpa ullam distinctio sunt. Nulla est rem necessitatibus et quis quam ut temporibus. Inventore tempora assumenda dicta et repellendus omnis qui a.',
+      comments: [
+        '2bed968a-7e00-4166-a96e-edcf46759c1f',
+        'cb6ce6de-38d6-44a8-98fa-d672134a1614',
+        '8e6b1a93-93c3-49da-9ee5-e3426d70bb5f'
+      ],
+      created: '2021-01-11T20:45:12.160Z'
+    },
+    {
+      id: 'e4ea4b7c-13a8-487c-b652-052b58ca4b6a',
+      userId: '6cfc2290-eb4e-4afc-be95-3df5e65d3353',
+      title: 'Odit dolor laboriosam quaerat aliquid necessitatibus',
+      content: 'Alias adipisci quaerat. Esse vel eius est magnam sed. Provident impedit quis non reiciendis sed voluptate quidem. Molestias temporibus iste quibusdam impedit voluptatem eum corporis. Et veritatis explicabo neque cumque. Non praesentium sed consectetur ex eius omnis fuga a omnis.',
+      comments: [
+        '674e22b5-c74c-45ea-b49e-9baa9e9a1067'
+      ],
+      created: '2021-01-06T00:08:43.520Z'
+    },
+    {
+      id: '3c4c284d-d4c9-42db-a719-1cb1e353d1a9',
+      userId: '6eb53580-9c7a-4989-8097-b8134dc6521f',
+      title: 'Ab blanditiis numquam et iusto corrupti earum',
+      content: 'Consequatur eos sequi ad et in rerum quia et mollitia. Eos quasi ad dolor itaque nam. Nemo deleniti corporis optio repellendus voluptas officia. Et ducimus a ut et. Ut cum ut cupiditate ullam quos aliquam. Eaque aut itaque dolorem.',
       comments: [],
-      created: '2021-01-22T19:00:58.698Z'
+      created: '2021-01-14T12:44:15.609Z'
     },
     {
-      id: 'acedc3fe-1ed5-48f3-bfb2-4766ca754f36',
-      userId: '5ea70834-0506-495f-9200-445729113a15',
-      title: 'Minus neque',
-      content: 'Laudantium magnam est sint ut qui. Quasi inventore tenetur est laudantium omnis voluptatem qui aliquid consequuntur. Non dolores omnis quidem. Omnis exercitationem veniam suscipit in temporibus repellendus eum. Libero corporis distinctio.',
+      id: 'c67562b0-92b4-4403-943d-7e8797c75540',
+      userId: '6eb53580-9c7a-4989-8097-b8134dc6521f',
+      title: 'Eveniet recusandae quos culpa soluta et',
+      content: 'Voluptate eligendi sit. Accusantium fuga enim fuga itaque aut. Omnis eum nesciunt eveniet sed iure ut quaerat vel. Enim aut vel fugiat ipsa culpa blanditiis quod ipsa.',
       comments: [
-        '83c287cd-09b7-4ffc-aaa8-a17bbe0af7c2'
+        '3931df99-87a3-482e-b8fb-05a90685a1a4'
       ],
-      created: '2021-01-21T20:50:19.353Z'
+      created: '2021-01-06T06:57:36.977Z'
     },
     {
-      id: '3f6eebf7-9295-4298-9434-78861497233f',
-      userId: '263b7db2-78b2-41ba-9db3-b6b59eb564ad',
-      title: 'Et laborum et voluptas velit eveniet nulla optio consectetur',
-      content: 'Laboriosam labore nesciunt ex molestias et illum deserunt. Rerum voluptatum veniam qui perspiciatis et officia iusto. Ipsam tempora et hic impedit ab cumque ratione facilis ut. Libero quis inventore iste eos velit sint.',
+      id: '1e634d7e-a09d-4943-9500-6f7ea628f412',
+      userId: '6cfc2290-eb4e-4afc-be95-3df5e65d3353',
+      title: 'Vitae nemo ipsam labore nostrum',
+      content: 'Voluptatum eos et. Placeat voluptates qui aut officiis dolorum id voluptatem. Omnis veritatis autem. Maiores itaque ut. Dolorum beatae earum illum enim omnis quo temporibus. Maxime libero libero quo quo odio voluptates doloremque consequuntur et.',
       comments: [
-        'b8f27bca-7d24-473c-afb1-390404b6cfde',
-        '7a5241aa-1327-42d9-9034-e9edf2599caa',
-        '6c5c5ac1-1793-4c58-97ba-258ebb7c7427'
+        'd262d2d4-9271-4956-8fd9-73f6633257fe',
+        '41ad6748-6135-490c-9984-723f0c52c1aa'
       ],
-      created: '2021-01-22T17:21:36.292Z'
+      created: '2021-01-29T06:29:33.058Z'
     },
     {
-      id: '0a2967d5-2a43-4383-a748-8aaba6c9ff93',
-      userId: '5ea70834-0506-495f-9200-445729113a15',
-      title: 'Aut optio sit labore',
-      content: 'Consequatur numquam voluptates quisquam consequatur quisquam aperiam accusantium est aut. Ut consectetur asperiores tempore labore assumenda aspernatur voluptate autem. Velit aut voluptatum cum tempora occaecati quos dolore repudiandae.',
+      id: 'ba1475bb-f8e2-474b-8ade-e2aa68afc047',
+      userId: '3d17f086-9e9b-45b5-b5d3-6d62f2ee7d7a',
+      title: 'Eaque',
+      content: 'Ratione eius corrupti fugiat a numquam est et eum consequatur. Saepe fugiat ut ea minus totam. Sint neque iure maiores commodi praesentium et. Vero voluptas quis sed quia totam distinctio. Praesentium vitae architecto labore ex dolores libero. Eaque dolor quae velit.',
       comments: [
-        '46543d8f-0c2a-438b-9c85-d14197ed4622',
-        'da4e60a4-2047-4497-a4a7-3c24c2ac752d'
+        '309f4013-90a9-47da-99c6-b6f66313f90d',
+        '3d1d1279-7b6e-45dc-b673-e85622b4ba05',
+        '9b5d2004-f709-4e86-9810-c9afd5bab18b',
+        '0ba08605-2897-4338-9301-fa540c2e4f7a'
       ],
-      created: '2021-01-02T10:30:10.785Z'
-    },
-    {
-      id: '21594488-3e4b-4558-94aa-9b55b52ef6ba',
-      userId: '263b7db2-78b2-41ba-9db3-b6b59eb564ad',
-      title: 'Id ea',
-      content: 'Facilis modi repellat optio tempore est incidunt aliquid rem sint. Cumque a enim et amet non numquam. Animi quo similique accusantium. Est doloribus a non est illo in molestias. Consequatur cupiditate nesciunt quis molestiae et sapiente.',
-      comments: [
-        'c56b97d0-e7d7-4ee7-a14c-75d75e964988',
-        'fe9ddfe4-fb88-4462-97b4-aa89aed81c98',
-        'd9449d42-97cf-4678-a27b-e1ef45cb4b3f'
-      ],
-      created: '2021-01-08T13:58:09.697Z'
-    },
-    {
-      id: 'b368b1d0-ef16-4ec5-a9de-47428937c669',
-      userId: '683d41a0-ba5c-4a6f-95bb-e84a10d300b6',
-      title: 'Sunt perferendis doloremque eum',
-      content: 'Sed cum quasi. Consequatur sed aliquid. Vero eaque quaerat dolor enim.',
-      comments: [
-        '3b09dc36-b593-4f4a-ac69-f392aa7f34f7'
-      ],
-      created: '2021-01-19T09:36:08.814Z'
-    },
-    {
-      id: '26e10849-1b01-49ee-937f-063242cb4612',
-      userId: '683d41a0-ba5c-4a6f-95bb-e84a10d300b6',
-      title: 'Quo pariatur sed voluptatem tenetur non velit rerum eveniet odit',
-      content: 'Et provident magni maxime necessitatibus accusamus impedit ipsa sed excepturi. Modi est dicta ut ullam possimus. Accusamus tempora ab beatae repellendus sit laboriosam error earum ratione. Autem sint id in accusantium maxime repellendus ullam quo earum. Hic laudantium nihil commodi est cumque magni sint.',
-      comments: [
-        '16047b53-fcf7-4840-8ebe-595b0bccb44c',
-        'a57ff963-e36c-423c-b067-46e642609d3f'
-      ],
-      created: '2021-01-16T18:20:12.729Z'
-    },
-    {
-      id: '8af2a47f-5fe8-4658-9c78-b425a51dc768',
-      userId: '5ea70834-0506-495f-9200-445729113a15',
-      title: 'Consectetur',
-      content: 'Quasi sunt placeat illum aut neque inventore commodi. Non expedita sunt aspernatur quam animi facilis. Non esse ea sunt natus sit dolorem voluptatum maiores. Atque voluptatem impedit hic aliquam ipsa aut omnis eos.',
-      comments: [
-        '94f4ecc0-730d-44e6-bbdc-48a03fe05583'
-      ],
-      created: '2021-01-08T01:51:06.876Z'
-    },
-    {
-      id: '63feb7d9-2a9a-4c9b-9928-a7b20d708075',
-      userId: '263b7db2-78b2-41ba-9db3-b6b59eb564ad',
-      title: 'Alias voluptas vel numquam perspiciatis provident molestiae',
-      content: 'Porro accusamus similique. Voluptatem occaecati sapiente id nisi nesciunt debitis eum alias omnis. Sunt et eius aliquid quae est. Ipsa odit minus at ipsam incidunt aperiam et. Veritatis placeat non ut sunt reprehenderit inventore sit amet.',
-      comments: [
-        'b63da0d7-0ec9-4da7-a0c7-43a5fb378c9e',
-        'e54dab2f-f96b-4e24-8c41-261e5b077e6a'
-      ],
-      created: '2021-01-29T17:36:48.927Z'
-    },
-    {
-      id: 'e868c741-d1aa-4dfa-a147-6e074ece7e20',
-      userId: '5ea70834-0506-495f-9200-445729113a15',
-      title: 'Possimus velit voluptatum delectus facere nam quas occaecati',
-      content: 'Expedita atque eum alias cupiditate. Magnam ipsum enim enim culpa tenetur et possimus autem. Eius ut rerum.',
-      comments: [
-        'a107de27-4588-492b-8a7c-f5d3c17f3bcf',
-        'caae128b-a7c6-48aa-8fed-6198b062aa8e'
-      ],
-      created: '2021-01-30T23:30:47.614Z'
-    },
-    {
-      id: 'eaf3650d-25f1-4486-8d88-64349b6dc91c',
-      userId: '0c0516c9-864e-4ed9-be2c-28b5b3ed9015',
-      title: 'Unde laudantium sint corporis illo et est',
-      content: 'Minus vero et odio sed id dolorem. Repudiandae consequuntur molestiae reiciendis est aut. Maiores id et cum temporibus reprehenderit iste eum velit. Facilis earum at sapiente suscipit. Beatae dolore adipisci dolorem aut. Veritatis expedita enim dolores voluptatem distinctio blanditiis dolor reiciendis perferendis.',
-      comments: [
-        '1a9ca476-2aec-419b-b800-a466c4bd53f4'
-      ],
-      created: '2021-01-05T19:12:57.081Z'
-    },
-    {
-      id: '5928321a-90cd-452e-9c82-225e67572634',
-      userId: '5ea70834-0506-495f-9200-445729113a15',
-      title: 'Eos veniam ea aut id voluptatum',
-      content: 'Aperiam quia ipsa nesciunt alias voluptas odio repellat exercitationem. Corrupti quidem dicta voluptas qui illo labore. Voluptas error voluptatem unde impedit voluptates nam illo. Eaque aliquid nisi aperiam impedit amet.',
-      comments: [
-        'dda71a2e-38cb-4f1e-a135-343d8b02b5ef'
-      ],
-      created: '2021-01-24T03:56:14.577Z'
+      created: '2021-01-28T04:56:03.203Z'
     }
   ];
 
   getAllPosts(): Post[] {
     return [...this.posts];
+  }
+
+  getPostById(id: string): Post {
+    const foundPost = this.posts.find(post => post.id === id);
+    if (!foundPost) {
+      return null;
+    }
+    return foundPost;
   }
 
   getPostByIndex(index: number): Post {
