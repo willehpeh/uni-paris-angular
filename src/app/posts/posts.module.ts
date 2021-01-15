@@ -4,7 +4,8 @@ import { PostComponent } from './components/post-list/post/post.component';
 import { SinglePostComponent } from './components/single-post/single-post.component';
 import { TitleListComponent } from './components/post-list/title-list/title-list.component';
 import { SharedModule } from '../shared/shared.module';
-import { RouterModule } from '@angular/router';
+import { PostsRoutingModule } from './posts-routing.module';
+import { PostsService } from './services/posts.service';
 
 @NgModule({
   declarations: [
@@ -15,13 +16,16 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     SharedModule,
-    RouterModule
+    PostsRoutingModule
   ],
   exports: [
     PostListComponent,
     PostComponent,
     SinglePostComponent,
     TitleListComponent
+  ],
+  providers: [
+    PostsService
   ]
 })
 export class PostsModule {}

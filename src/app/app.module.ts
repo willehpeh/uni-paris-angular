@@ -4,21 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import { FourOhFourComponent } from './components/four-oh-four/four-oh-four.component';
-import { PostsModule } from './posts/posts.module';
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    FourOhFourComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     NoopAnimationsModule,
-    PostsModule,
+    AppRoutingModule,
     SharedModule,
-    AppRoutingModule
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

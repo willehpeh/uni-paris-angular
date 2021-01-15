@@ -1,12 +1,9 @@
 import { RouterModule, Routes } from '@angular/router';
-import { PostListComponent } from './posts/components/post-list/post-list.component';
 import { NgModule } from '@angular/core';
-import { SinglePostComponent } from './posts/components/single-post/single-post.component';
-import { FourOhFourComponent } from './components/four-oh-four/four-oh-four.component';
+import { FourOhFourComponent } from './core/components/four-oh-four/four-oh-four.component';
 
 const routes: Routes = [
-  { path: 'posts', component: PostListComponent },
-  { path: 'posts/:id', component: SinglePostComponent },
+  { path: 'posts', loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule) },
   { path: '404', component: FourOhFourComponent },
   { path: '', pathMatch: 'full', redirectTo: 'posts' },
   { path: '**', redirectTo: '404' }
