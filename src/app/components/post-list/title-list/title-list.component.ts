@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Post } from '../models/post.model';
+import { Post } from '../../../models/post.model';
 
 @Component({
   selector: 'app-title-list',
@@ -8,16 +8,15 @@ import { Post } from '../models/post.model';
 })
 export class TitleListComponent implements OnInit {
 
-  @Input() postList: Post[];
-  @Input() toggled: boolean;
+  @Input() posts: Post[];
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onClickButton(): void {
-    this.toggled = !this.toggled;
+  getTitleStyle(i: number): { color: 'green' | 'black' } {
+    return { color: i % 2 === 0 ? 'green' : 'black' };
   }
 
 }

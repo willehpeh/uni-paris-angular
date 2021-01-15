@@ -1,7 +1,8 @@
 export class Post {
+  id: string;
+  userId: string;
   title: string;
-  user: string;
-  date: Date;
+  created: string;
   content: string;
-  imageUrl: string;
+  comments: string[];
 }

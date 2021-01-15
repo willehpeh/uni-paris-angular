@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Post } from '../models/post.model';
+import { Post } from '../../../models/post.model';
 
 @Component({
   selector: 'app-post',
@@ -10,6 +10,7 @@ export class PostComponent implements OnInit {
 
   @Input() postObject: Post;
   @Input() counter: number;
+  @Input() index: number;
   @Output() buttonClicked = new EventEmitter<string>();
   buttonText: string;
 
