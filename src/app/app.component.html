@@ -1,5 +1,6 @@
 <mat-toolbar color="primary">
   <span>Blog Université de Paris</span>
   <a routerLink="posts">Posts</a>
+  <button *ngIf="authStatus.isLoggedIn" mat-flat-button color="accent" (click)="onLogout()">Se déconnecter</button>
 </mat-toolbar>
 <router-outlet></router-outlet>

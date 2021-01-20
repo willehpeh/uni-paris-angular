@@ -4,6 +4,7 @@ import { FourOhFourComponent } from './core/components/four-oh-four/four-oh-four
 
 const routes: Routes = [
   { path: 'posts', loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule) },
+  { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
   { path: '404', component: FourOhFourComponent },
   { path: '', pathMatch: 'full', redirectTo: 'posts' },
   { path: '**', redirectTo: '404' }
