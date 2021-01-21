@@ -1,9 +1,12 @@
 <mat-card>
-  <mat-card-header>
-    <mat-card-title [ngStyle]="{ color: counter >= 3 ? 'green' : 'black' }">{{ postObject.title }}</mat-card-title>
-    <mat-card-subtitle>Ecrit par {{ userFirstName }} le {{ postObject.created | date: 'dd/MM/YYYY' }}</mat-card-subtitle>
-    <img mat-card-avatar [src]="userImageUrl" alt="avatar">
-  </mat-card-header>
+  <ng-container *ngIf="user$ | async as user">
+    <mat-card-header>
+      <mat-card-title [ngStyle]="{ color: counter >= 3 ? 'green' : 'black' }">{{ postObject.title }}</mat-card-title>
+      <mat-card-subtitle>Ecrit par {{ user.firstName }}
+        le {{ postObject.created | date: 'dd/MM/YYYY' }}</mat-card-subtitle>
+      <img mat-card-avatar [src]="user.image" alt="avatar">
+    </mat-card-header>
+  </ng-container>
   <mat-card-content>{{ postObject.content }}</mat-card-content>
   <mat-card-actions>
     <button mat-flat-button color="primary" (click)="onClickButton()">{{ buttonText }}</button>

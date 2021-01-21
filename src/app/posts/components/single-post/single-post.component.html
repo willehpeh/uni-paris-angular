@@ -1,9 +1,11 @@
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>{{ post.title }}</mat-card-title>
-    <mat-card-subtitle>Ecrit par {{ userFirstName }} le {{ post.created | date: 'dd/MM/YYYY' }}</mat-card-subtitle>
-    <img mat-card-avatar [src]="userImageUrl" alt="avatar">
-  </mat-card-header>
+<mat-card *ngIf="post$ | async as post">
+  <ng-container *ngIf="user$ | async as user">
+    <mat-card-header>
+      <mat-card-title>{{ post.title }}</mat-card-title>
+      <mat-card-subtitle>Ecrit par {{ user.firstName }} le {{ post.created | date: 'dd/MM/YYYY' }}</mat-card-subtitle>
+      <img mat-card-avatar [src]="user.image" alt="avatar">
+    </mat-card-header>
+  </ng-container>
   <mat-card-content>{{ post.content }}</mat-card-content>
   <mat-card-actions>
     <button mat-flat-button color="primary" (click)="onClickBack()">Back</button>

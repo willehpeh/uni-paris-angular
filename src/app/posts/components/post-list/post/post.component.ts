@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Post } from '../../../models/post.model';
 import { UserService } from '../../../../core/services/user.service';
+import { Observable } from 'rxjs';
+import { User } from '../../../../core/models/user.model';
 
 @Component({
   selector: 'app-post',
@@ -13,15 +15,13 @@ export class PostComponent implements OnInit {
   @Input() counter: number;
   @Output() buttonClicked = new EventEmitter<string>();
   buttonText: string;
-  userFirstName: string;
-  userImageUrl: string;
+  user$: Observable<User>;
 
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
     this.buttonText = 'Click me!';
-    this.userFirstName = this.userService.getFirstNameByUserId(this.postObject.userId);
-    this.userImageUrl = this.userService.getImageUrlByUserId(this.postObject.userId);
+    this.user$ = this.userService.getUserByUserId(this.postObject.userId);
   }
 
   onClickButton(): void {
