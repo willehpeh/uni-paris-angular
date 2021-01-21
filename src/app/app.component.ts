@@ -10,7 +10,6 @@ import { takeUntil, tap } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-  authStatus: { isLoggedIn: boolean };
   isLoggedIn$: Observable<boolean>;
 
   destroy$: Subject<boolean>;
@@ -20,8 +19,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.destroy$ = new Subject<boolean>();
-    this.authStatus = this.authService.authStatus;
-    this.isLoggedIn$ = this.authService.isLoggedIn$.pipe(
+    this.isLoggedIn$ = this.authService.getAuthStatus().pipe(
       takeUntil(this.destroy$),
       tap(value => console.log(value)),
       // map(value => value ? 'Authentifié !' : 'Non authentifié !'),
