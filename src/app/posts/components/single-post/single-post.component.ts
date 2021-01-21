@@ -30,15 +30,6 @@ export class SinglePostComponent implements OnInit {
     this.user$ = this.post$.pipe(
       switchMap(post => this.userService.getUserByUserId(post.userId)),
     );
-
-    // if (postObj) {
-    //   this.post = postObj;
-    //   const user = this.userService.getUserByUserId(this.post.userId);
-    //   this.userFirstName = user.firstName;
-    //   this.userImageUrl = user.image;
-    // } else {
-    //   this.router.navigateByUrl('/404');
-    // }
   }
 
   onClickBack(): void {
