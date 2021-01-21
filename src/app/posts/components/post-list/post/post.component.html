@@ -1,7 +1,7 @@
 <mat-card>
   <mat-card-header>
     <mat-card-title [ngStyle]="{ color: counter >= 3 ? 'green' : 'black' }">{{ postObject.title }}</mat-card-title>
-    <mat-card-subtitle>Ecrit par {{ userFirstName }} le {{ postObject.created }}</mat-card-subtitle>
+    <mat-card-subtitle>Ecrit par {{ userFirstName }} le {{ postObject.created | date: 'dd/MM/YYYY' }}</mat-card-subtitle>
     <img mat-card-avatar [src]="userImageUrl" alt="avatar">
   </mat-card-header>
   <mat-card-content>{{ postObject.content }}</mat-card-content>
