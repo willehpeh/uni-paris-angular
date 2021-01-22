@@ -3,5 +3,5 @@
   <app-post *ngFor="let postElement of posts" [postObject]="postElement" [counter]="0"
             (buttonClicked)="onPostButtonClicked($event)"></app-post>
   <app-title-list [posts]="posts"></app-title-list>
-  <button mat-flat-button color="warn" (click)="onDeleteFirstPost()">Delete First Post</button>
+  <button mat-flat-button color="warn">Delete First Post</button>
 </ng-container>

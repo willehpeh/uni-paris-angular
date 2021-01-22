@@ -18,11 +18,11 @@ export class PostsService {
     return this.http.get<Post>(`${environment.apiUrl}/posts/${id}`);
   }
 
-  getPostByIndex(index: number): Post {
-    return this.posts[index] || null;
-  }
+  // getPostByIndex(index: number): Post {
+  //   return this.posts[index] || null;
+  // }
 
-  deletePost(index: number): void {
-    this.posts.splice(index, 1);
-  }
+  // deletePost(index: number): void {
+  //   this.posts.splice(index, 1);
+  // }
 }

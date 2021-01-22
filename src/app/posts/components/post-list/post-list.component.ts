@@ -29,9 +29,9 @@ export class PostListComponent implements OnInit {
     alert(title);
   }
 
-  onDeleteFirstPost(): void {
-    this.postsService.deletePost(0);
-    this.posts = this.postsService.getAllPosts();
-  }
+  // onDeleteFirstPost(): void {
+  //   this.postsService.deletePost(0);
+  //   this.posts = this.postsService.getAllPosts();
+  // }
 
 }
