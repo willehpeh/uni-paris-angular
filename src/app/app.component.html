@@ -1,6 +1,13 @@
 <mat-toolbar color="primary">
   <span>Blog Université de Paris</span>
   <a routerLink="posts">Posts</a>
-  <button *ngIf="isLoggedIn$ | async" mat-flat-button color="accent" (click)="onLogout()">Se déconnecter</button>
+  <ng-container *ngIf="isLoggedIn$ | async">
+    <button mat-flat-button color="accent"
+            (click)="onLogout()">Se déconnecter
+    </button>
+    <button mat-flat-button color="accent"
+            (click)="onNewPost()">Nouveau post
+    </button>
+  </ng-container>
 </mat-toolbar>
 <router-outlet></router-outlet>

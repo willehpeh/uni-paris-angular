@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-title>Nouveau post</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="newPostForm">
+      <mat-form-field>
+        <input type="text" matInput placeholder="Titre" formControlName="title">
+      </mat-form-field>
+      <mat-form-field>
+        <textarea cols="30" rows="10" matInput placeholder="Votre post ici" formControlName="content">
+        </textarea>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button
+            color="primary"
+            (click)="onSavePost()"
+            [disabled]="newPostForm.invalid"
+    >Enregistrer</button>
+  </mat-card-actions>
+</mat-card>

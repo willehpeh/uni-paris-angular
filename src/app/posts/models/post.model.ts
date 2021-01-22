@@ -6,3 +6,8 @@ export class Post {
   content: string;
   comments: string[];
 }
+
+export class PostDto {
+  title: string;
+  content: string;
+}

@@ -1,22 +1,28 @@
 import { NgModule } from '@angular/core';
-import { PostListComponent } from './components/post-list/post-list.component';
-import { PostComponent } from './components/post-list/post/post.component';
-import { SinglePostComponent } from './components/single-post/single-post.component';
-import { TitleListComponent } from './components/post-list/title-list/title-list.component';
+import {
+  PostListComponent,
+  PostComponent,
+  SinglePostComponent,
+  TitleListComponent,
+  NewPostComponent
+} from './components';
 import { SharedModule } from '../shared/shared.module';
 import { PostsRoutingModule } from './posts-routing.module';
 import { PostsService } from './services/posts.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     PostListComponent,
     PostComponent,
     SinglePostComponent,
-    TitleListComponent
+    TitleListComponent,
+    NewPostComponent
   ],
   imports: [
     SharedModule,
-    PostsRoutingModule
+    PostsRoutingModule,
+    ReactiveFormsModule
   ],
   exports: [
     PostListComponent,
