@@ -1,23 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Post } from '../../models/post.model';
 import { PostsService } from '../../services/posts.service';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
+import { Observable, Subject } from 'rxjs';
+import { map, shareReplay, switchMap } from 'rxjs/operators';
+import { SearchService } from '../../../core/services/search.service';
 
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.scss']
 })
-export class PostListComponent implements OnInit {
+export class PostListComponent implements OnInit, OnDestroy {
 
   posts$: Observable<Post[]>;
   totalPosts$: Observable<number>;
 
-  constructor(private postsService: PostsService) { }
+  destroy$: Subject<boolean>;
+
+  constructor(private postsService: PostsService,
+              private searchService: SearchService) { }
 
   ngOnInit(): void {
-    this.posts$ = this.postsService.getAllPosts().pipe(
+    this.destroy$ = new Subject<boolean>();
+    this.posts$ = this.searchService.getSearchText().pipe(
+      // startWith(''),
+      switchMap(searchText => this.postsService.getAllPosts(searchText)),
       shareReplay(1)
     );
     this.totalPosts$ = this.posts$.pipe(
@@ -34,4 +41,7 @@ export class PostListComponent implements OnInit {
   //   this.posts = this.postsService.getAllPosts();
   // }
 
+  ngOnDestroy(): void {
+    this.destroy$.next(true);
+  }
 }

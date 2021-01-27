@@ -9,5 +9,8 @@
             (click)="onNewPost()">Nouveau post
     </button>
   </ng-container>
+  <form [formGroup]="searchForm">
+    <input type="text" formControlName="search">
+  </form>
 </mat-toolbar>
 <router-outlet></router-outlet>

@@ -3,7 +3,9 @@ import { Router } from '@angular/router';
 import { Observable, BehaviorSubject, EMPTY } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
-import { catchError, tap } from 'rxjs/operators';
+import { catchError, map, switchMap, tap } from 'rxjs/operators';
+import { UserService } from '../../core/services/user.service';
+import { User } from '../../core/models/user.model';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -12,7 +14,8 @@ export class AuthService {
   private token$ = new BehaviorSubject<string>('');
 
   constructor(private router: Router,
-              private http: HttpClient) {}
+              private http: HttpClient,
+              private userService: UserService) {}
 
   getAuthStatus(): Observable<boolean> {
     return this.isLoggedIn$.asObservable();
@@ -22,11 +25,16 @@ export class AuthService {
     return this.token$.asObservable();
   }
 
-  signUp(): Observable<{ token: string }> {
+  signUp(): Observable<User> {
     return this.http.get<{ token: string }>(`${environment.apiUrl}/auth`).pipe(
-      tap((response) => {
+      tap(({ token }) => {
         this.isLoggedIn$.next(true);
-        this.token$.next(response.token);
+        this.token$.next(token);
+      }),
+      switchMap(() => this.userService.getAllUsers()),
+      map(users => users[0]),
+      tap(user => {
+        this.userService.setCurrentUser(user);
         this.router.navigateByUrl('/posts');
       }),
       catchError(error => {
@@ -36,11 +44,16 @@ export class AuthService {
     );
   }
 
-  login(): Observable<{ token: string }> {
+  login(): Observable<User> {
     return this.http.get<{ token: string }>(`${environment.apiUrl}/auth`).pipe(
       tap(({ token }) => {
         this.isLoggedIn$.next(true);
         this.token$.next(token);
+      }),
+      switchMap(() => this.userService.getAllUsers()),
+      map(users => users[0]),
+      tap(user => {
+        this.userService.setCurrentUser(user);
         this.router.navigateByUrl('/posts');
       }),
       catchError(error => {

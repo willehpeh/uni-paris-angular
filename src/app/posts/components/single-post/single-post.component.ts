@@ -3,9 +3,9 @@ import { Post } from '../../models/post.model';
 import { PostsService } from '../../services/posts.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../../../core/services/user.service';
-import { Observable } from 'rxjs';
+import { combineLatest, Observable } from 'rxjs';
 import { User } from '../../../core/models/user.model';
-import { shareReplay, switchMap } from 'rxjs/operators';
+import { map, shareReplay, switchMap, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-single-post',
@@ -16,6 +16,8 @@ export class SinglePostComponent implements OnInit {
 
   post$: Observable<Post>;
   user$: Observable<User>;
+  currentUser$: Observable<User>;
+  postIsMine$: Observable<boolean>;
 
   constructor(private postsService: PostsService,
               private route: ActivatedRoute,
@@ -30,10 +32,24 @@ export class SinglePostComponent implements OnInit {
     this.user$ = this.post$.pipe(
       switchMap(post => this.userService.getUserByUserId(post.userId)),
     );
+    this.currentUser$ = this.userService.getCurrentUser();
+    this.postIsMine$ = combineLatest([this.post$, this.currentUser$]).pipe(
+      map(([post, currentUser]) => post.userId === currentUser.id)
+    );
   }
 
   onClickBack(): void {
     this.router.navigateByUrl('/posts');
+  }
+
+  onModifyPost(): void {
+
+  }
+
+  onDeletePost(id: string): void {
+    this.postsService.deletePost(id).pipe(
+      tap(() => this.router.navigateByUrl('/posts'))
+    ).subscribe();
   }
 
 }

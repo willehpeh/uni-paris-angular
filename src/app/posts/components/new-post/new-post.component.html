@@ -1,9 +1,11 @@
-<mat-card>
+<mat-spinner *ngIf="loading"></mat-spinner>
+<mat-card *ngIf="!loading">
   <mat-card-title>Nouveau post</mat-card-title>
   <mat-card-content>
     <form [formGroup]="newPostForm">
       <mat-form-field>
         <input type="text" matInput placeholder="Titre" formControlName="title">
+        <mat-error *ngIf="newPostForm.get('title').invalid">{{ getTitleError() }}</mat-error>
       </mat-form-field>
       <mat-form-field>
         <textarea cols="30" rows="10" matInput placeholder="Votre post ici" formControlName="content">
@@ -15,7 +17,7 @@
     <button mat-flat-button
             color="primary"
             (click)="onSavePost()"
-            [disabled]="newPostForm.invalid"
+            [disabled]="newPostForm.invalid || loading"
     >Enregistrer</button>
   </mat-card-actions>
 </mat-card>
