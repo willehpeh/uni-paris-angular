@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Post } from '../models/post.model';
+import { Post, PostDto } from '../models/post.model';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { EMPTY, Observable } from 'rxjs';
@@ -16,16 +16,22 @@ export class PostsService {
 
   getAllPosts(searchText?: string): Observable<Post[]> {
     const url = searchText ?
-      `${environment.apiUrl}/posts?q=${searchText}` :
-      `${environment.apiUrl}/posts`;
+      `${environment.postsApiUrl}?q=${searchText}` :
+      `${environment.postsApiUrl}`;
     return this.http.get<Post[]>(url);
   }
 
   getPostById(id: string): Observable<Post> {
-    return this.http.get<Post>(`${environment.apiUrl}/posts/${id}`);
+    return this.http.get<Post>(`${environment.postsApiUrl}/${id}`);
   }
 
-  createNewPost(formValue: { title: string, content: string }): Observable<Post> {
+  uploadFile(file: File): void {
+    const formData = new FormData();
+    formData.append('file', file);
+    this.http.post(`${environment.postsApiUrl}/endpoint-qui-marche`, formData);
+  }
+
+  createNewPost(formValue: PostDto): Observable<Post> {
     return this.userService.getCurrentUser().pipe(
       map(user => {
         const post = new Post();
@@ -37,7 +43,7 @@ export class PostsService {
         post.userId = user.id;
         return post;
       }),
-      switchMap(post => this.http.post<Post>(`${environment.apiUrl}/posts`, post)),
+      switchMap(post => this.http.post<Post>(`${environment.postsApiUrl}`, post)),
       catchError(error => {
         alert(error);
         return EMPTY;
@@ -45,8 +51,12 @@ export class PostsService {
     );
   }
 
+  modifyPost(post: Post): Observable<{}> {
+    return this.http.put(`${environment.postsApiUrl}/${post.id}`, post);
+  }
+
   deletePost(id: string): Observable<{}> {
-    return this.http.delete(`${environment.apiUrl}/posts/${id}`);
+    return this.http.delete(`${environment.postsApiUrl}/${id}`);
   }
 
   // getPostByIndex(index: number): Post {

@@ -10,5 +10,6 @@
   <mat-card-actions>
     <button mat-flat-button color="primary" (click)="onClickBack()">Back</button>
     <button mat-flat-button color="warn" (click)="onDeletePost(post.id)" *ngIf="postIsMine$ | async">Delete</button>
+    <button mat-flat-button color="accent" (click)="onModifyPost(post.id)" *ngIf="postIsMine$ | async">Modify</button>
   </mat-card-actions>
 </mat-card>

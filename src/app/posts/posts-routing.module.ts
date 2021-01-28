@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   { path: 'new', component: NewPostComponent },
+  { path: 'modify/:id', component: NewPostComponent },
   { path: ':id', component: SinglePostComponent },
   { path: '', pathMatch: 'full', component: PostListComponent }
 ];

@@ -42,8 +42,8 @@ export class SinglePostComponent implements OnInit {
     this.router.navigateByUrl('/posts');
   }
 
-  onModifyPost(): void {
-
+  onModifyPost(id: string): void {
+    this.router.navigateByUrl(`/posts/modify/${id}`);
   }
 
   onDeletePost(id: string): void {
